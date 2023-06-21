@@ -169,7 +169,3 @@
     right: 16px;
     z-index: 10;
 }
-
-.like:hover {
-    background-color: var(--btn-hover);
-}

@@ -15,7 +15,6 @@ const Home = {
         `;
     },
 
-    // eslint-disable-next-line no-empty-function
     async afterRender() {
         const data = await RestaurantSource.getRestaurantList();
         const listContainer = document.querySelector('#explore-restaurant');

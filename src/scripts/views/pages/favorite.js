@@ -1,3 +1,6 @@
+import FavoriteRestaurantIdb from '../../data/favorite-resto-idb';
+import { restoCard } from '../templates/template-creator';
+
 const Favorite = {
     async render() {
         return `
@@ -8,9 +11,12 @@ const Favorite = {
         `;
     },
 
-    // eslint-disable-next-line no-empty-function
     async afterRender() {
-        
+        const data = await FavoriteRestaurantIdb.getAllRestaurants();
+        const listFavorite = document.querySelector('#fav-resto');
+        data.forEach((restaurant) => {
+            listFavorite.innerHTML += restoCard(restaurant);
+        });
     },
 };
 

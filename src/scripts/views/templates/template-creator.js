@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config';
 
 const restoCard = (restaurant) => `
         <div tabindex="0" class="card">
-            <a href="#/resto/${restaurant.id}" class="card-a-tag">
+            <a href="#/detail/${restaurant.id}" class="card-a-tag">
                 <div class="img-container">
                     <img tabindex="0" class="card-image" crossorigin="anonymous" alt="${restaurant.name}" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"/>
                     <span tabindex="0" class="card-rating">
@@ -106,4 +106,21 @@ const restoDetail = (restaurant) => `
     </div>
 `;
 
-export { restoCard, restoDetail };
+const createLikeRestoButtonTemplate = () => `
+    <button aria-label="like this resto" id="likeButton" class="like">
+        <i class="far fa-heart" aria-hidden="true"></i>
+    </button>
+`;
+
+const createUnlikeRestoButtonTemplate = () => `
+    <button aria-label="unlike this resto" id="likeButton" class="like">
+        <i class="fas fa-heart" aria-hidden="true"></i>
+    </button>
+`;
+
+export {
+    restoCard,
+    restoDetail,
+    createLikeRestoButtonTemplate,
+    createUnlikeRestoButtonTemplate,
+};
