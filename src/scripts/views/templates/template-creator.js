@@ -4,7 +4,7 @@ const restoCard = (restaurant) => `
         <div tabindex="0" class="card">
             <a href="#/detail/${restaurant.id}" class="card-a-tag">
                 <div class="img-container">
-                    <img tabindex="0" class="card-image lazyload" crossorigin="anonymous" alt="${restaurant.name}" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"/>
+                    <img tabindex="0" class="card-image lazyload" crossorigin="anonymous" alt="${restaurant.name}" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"/>
                     <span tabindex="0" class="card-rating">
                         <i title="ratings" class="fa fa-star"></i>
                     <span>${restaurant.rating}</span>
@@ -22,7 +22,7 @@ const restoCard = (restaurant) => `
 const restoDetail = (restaurant) => `
         <div class="detail">
             <div class="img-container">
-                <img class="detail-img lazyload" alt="${restaurant.name}" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"/>
+                <img class="detail-img lazyload" alt="${restaurant.name}" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"/>
             </div>
 
             <ul class="detail-info">

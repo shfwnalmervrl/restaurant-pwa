@@ -84,6 +84,7 @@ main {
 }
 
 .card-content-title {
+  min-height: 44px;
   font-weight: bold;
   padding-bottom: 0.376em;
   color: var(--btn);
